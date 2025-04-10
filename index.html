@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaGuard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-page" class="container">
+        <header class="header">
+            <h1>InstaGuard</h1>
+            <p>Securely log in to access your dashboard.</p>
+        </header>
+        <main class="main">
+            <form id="login-form">
+                <label for="user-id" class="input-label">User  ID:</label>
+                <input type="text" id="user-id" name="user-id" placeholder="Enter your User ID" required>
+                
+                <label for="email" class="input-label">Email ID:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email ID" required>
+                
+                <button type="submit" class="auth-button">Login</button>
+            </form>
+        </main>
+        <footer class="footer">
+            <p>Powered by InstaGuard</p>
+        </footer>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home-page" class="container hidden">
+        <header class="header">
+            <h1>Welcome Back!</h1>
+        </header>
+        <main class="main">
+            <p>Access your dashboard to analyze Instagram accounts, view your history, and more.</p>
+            <button id="dashboard-button" class="auth-button">Go to Dashboard</button>
+        </main>
+        <footer class="footer">
+            <p>Powered by InstaGuard</p>
+        </footer>
+    </div>
+
+    <!-- User Dashboard -->
+    <div id="dashboard-page" class="container hidden">
+        <header class="header">
+            <h1>User Dashboard</h1>
+        </header>
+        <main class="main">
+            <div class="stats">
+                <p>Total Fake Accounts Reported: <span id="fake-count">0</span></p>
+            </div>
+            <button id="analyze-button" class="auth-button">Analyze Account</button>
+            <button id="history-button" class="auth-button">View History</button>
+        </main>
+        <footer class="footer">
+            <p>Powered by InstaGuard</p>
+        </footer>
+    </div>
+
+    <!-- History Page -->
+    <div id="history-page" class="container hidden">
+        <header class="header">
+            <h1>Reported Accounts History</h1>
+        </header>
+        <main class="main">
+            <ul id="history-list" class="history-list"></ul>
+            <button id="back-dashboard" class="auth-button">Back to Dashboard</button>
+        </main>
+        <footer class="footer">
+            <p>Powered by InstaGuard</p>
+        </footer>
+    </div>
+
+    <!-- Landing Page -->
+    <div id="landing-page" class="container hidden">
+        <header class="header">
+            <h1>Welcome to InstaGuard</h1>
+            <p>Analyze Instagram accounts for authenticity and protect your presence.</p>
+        </header>
+        <main class="main">
+            <p>To begin, allow InstaGuard to access your Instagram activity for analysis.</p>
+            <button id="allow-access" class="auth-button">Allow Access</button>
+        </main>
+        <footer class="footer">
+            <p>Powered by InstaGuard</p>
+        </footer>
+    </div>
+
+    <!-- Analysis Page -->
+    <div id="analysis-page" class="container hidden">
+        <header class="header">
+            <h1>Analyze Instagram Account</h1>
+        </header>
+        <main class="main">
+            <form id="analyze-form">
+                <label for="handle" class="input-label">Enter Instagram Handle:</label>
+                <input type="text" id="handle" name="handle" placeholder="@username" required>
+                <button type="submit" class="analyze-button">Analyze</button>
+            </form>
+            <div id="result" class="result-box"></div>
+            <button id="report-button" class="report-button hidden">Report Fake Account</button>
+            <div id="report-details" class="report-details hidden"></div> <!-- New section for detailed report -->
+        </main>
+        <footer class="footer">
+            <p>Powered by InstaGuard</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
